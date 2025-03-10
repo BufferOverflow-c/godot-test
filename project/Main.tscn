@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqyv6wneqg7em"]
+
+[ext_resource type="Texture2D" uid="uid://b1jfakf6uwc0y" path="res://art/playerGrey_up1.png" id="1_glv2v"]
+
+[node name="Main" type="Node2D"]
+process_mode = 3
+position = Vector2(250, 250)
+
+[node name="GDExample" type="GDExample" parent="."]
+position = Vector2(1.12729, 9.66859)
+texture = ExtResource("1_glv2v")
