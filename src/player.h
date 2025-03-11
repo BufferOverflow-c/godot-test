@@ -1,16 +1,16 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <godot_cpp/classes/area2d.hpp>
 #include <godot_cpp/classes/animated_sprite2d.hpp>
+#include <godot_cpp/classes/area2d.hpp>
+#include <godot_cpp/classes/collision_shape2d.hpp>
 #include <godot_cpp/classes/input.hpp>
 #include <godot_cpp/classes/node2d.hpp>
 #include <godot_cpp/classes/physics_body2d.hpp>
-#include <godot_cpp/classes/collision_shape2d.hpp>
 namespace godot {
 
 class Player : public Area2D {
-  GDCLASS(Player, Area2D) 
+  GDCLASS(Player, Area2D)
 public:
   Player();
   ~Player();
@@ -32,8 +32,9 @@ protected:
   void movement();
   void updateAnimation();
   void updatePosition(const double delta);
+
 private:
-  CollisionShape2D *collisionShape2D{nullptr};  
+  CollisionShape2D *collisionShape2D{nullptr};
   AnimatedSprite2D *animatedSprite2D{nullptr};
   double speed{};
   Vector2 screenSize{};
@@ -41,6 +42,6 @@ private:
   Vector2 position{};
 };
 
-}
+} // namespace godot
 
 #endif // !PLAYER_H

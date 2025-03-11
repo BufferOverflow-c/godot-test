@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cr67tv2qnj4k4"]
+[gd_scene load_steps=3 format=3 uid="uid://cr67tv2qnj4k4"]
 
-[ext_resource type="PackedScene" uid="uid://dery7gi151msa" path="res://Mob.tscn" id="1_l23pf"]
 [ext_resource type="PackedScene" uid="uid://brh2b303dtguh" path="res://Player.tscn" id="1_uy6ox"]
 
 [sub_resource type="Curve2D" id="Curve2D_m0byv"]
@@ -9,20 +8,10 @@ _data = {
 }
 point_count = 5
 
-[node name="GameScene" type="GameScene"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-Mob_Scene = ExtResource("1_l23pf")
-script = null
+[node name="GameScene" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_uy6ox")]
+position = Vector2(-52, -66)
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
