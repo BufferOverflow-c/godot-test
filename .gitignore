@@ -8,6 +8,8 @@
 
 CMakeCache.txt
 
+project/.godot/editor/filesystem_cache*
+
 .vs/**
 !.vs/launch.vs.json
 !.vs/VSWorkspaceSettings.json
