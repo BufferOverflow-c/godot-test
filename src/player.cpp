@@ -15,8 +15,6 @@ Player::Player() {
 
 Player::~Player() {
   // Add cleanup
-  collisionShape2D = nullptr;
-  animatedSprite2D = nullptr;
 }
 
 void Player::_ready() {
