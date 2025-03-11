@@ -7,14 +7,18 @@
 using namespace godot;
 
 Player::Player() {
+  animatedSprite2D = nullptr;
+  collisionShape2D = nullptr;
   speed = 400.0;
   position = {240, 360};
 }
 
 Player::~Player() {
   // Add cleanup
-  delete animatedSprite2D;
+  collisionShape2D = nullptr;
   animatedSprite2D = nullptr;
+  delete collisionShape2D;
+  delete animatedSprite2D;
 }
 
 void Player::_ready() {
@@ -81,11 +85,11 @@ void Player::start(Vector2 position) {
   collisionShape2D->set_disabled(false);
 }
 
-void Player::_on_body_entered(Node2D *body) {
-  hide();
-  emit_signal("hit_event", this, body);
-  collisionShape2D->set_disabled(true);
-}
+/*void Player::_on_body_entered(Node2D *body) {*/
+/*  hide();*/
+/*  emit_signal("hit_event", this, body);*/
+/*  collisionShape2D->set_disabled(true);*/
+/*}*/
 
 double Player::get_speed() const { return speed; }
 

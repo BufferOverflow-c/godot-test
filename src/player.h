@@ -7,6 +7,9 @@
 #include <godot_cpp/classes/input.hpp>
 #include <godot_cpp/classes/node2d.hpp>
 #include <godot_cpp/classes/physics_body2d.hpp>
+
+#include <memory>
+
 namespace godot {
 
 class Player : public Area2D {
@@ -18,7 +21,7 @@ public:
   // OVERRIDES
   void _ready() override;
   void _process(const double delta) override;
-  void _on_body_entered(Node2D *body);
+  /*void _on_body_entered(Node2D *body);*/
 
   void start(Vector2 position);
 
