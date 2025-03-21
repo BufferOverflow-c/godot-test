@@ -1,8 +1,6 @@
 #include "register_types.h"
 
-#include "gdexample.h"
-#include "main.h"
-#include "player.h"
+/*#include ""*/
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -15,9 +13,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
     return;
   }
 
-  GDREGISTER_CLASS(GDExample);
-  GDREGISTER_CLASS(Player);
-  GDREGISTER_CLASS(Main);
+  /*GDREGISTER_CLASS();*/
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {
